@@ -108,18 +108,6 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-
-<!--打成WAR包-->  
-    <target name="generwar" depends="compile">  
-        <echo message="打成WAR" />  
-        <war destfile="${build}/${ant.project.name}.war" webxml="${webApp}/WEB-INF/web.xml">  
-            <fileset dir="webApp">  
-            </fileset>  
-            <lib dir="${lib}" />  
-            <classes dir="${build.class}" />  
-        </war>  
-    </target>  
-
     <target name="Tomcat.1">
         <java classname="org.apache.catalina.startup.Tomcat$1" failonerror="true" fork="yes">
             <classpath refid="passweb.classpath"/>
