@@ -109,9 +109,9 @@
         <antcall target="build"/>
     </target>
 
-<!--打成WAR包-->  
+ 
     <target name="generwar" depends="compile">  
-        <echo message="打成WAR" />  
+        <echo message="WAR" />  
         <war destfile="${build}/${ant.project.name}.war" webxml="${webApp}/WEB-INF/web.xml">  
             <fileset dir="webApp">  
             </fileset>  
