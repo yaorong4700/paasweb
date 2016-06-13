@@ -14,7 +14,7 @@
 
     <target name="compile" depends="init" >
 	<javac destdir="build/classes" debug="true" srcdir="src">
-		<classpath refid="passweb.classpath"/>
+		<classpath refid="compile.classpath"/>
 	</javac>
     </target>
     
