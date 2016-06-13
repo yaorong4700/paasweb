@@ -1,25 +1,10 @@
 <?xml version="1.0" ?> 
 <project name="AntExample1" default="war">
-   <path id="passweb.classpath">
-        <pathelement location="build/classes"/>
-        <pathelement location="../json_org.jar/json_org.jar"/>
-        <pathelement location="../json-lib.jar/json-lib.jar"/>
-        <pathelement location="../jarh/commons-beanutils.jar/commons-beanutils.jar"/>
-        <pathelement location="../jarh/commons-collections.jar/commons-collections.jar"/>
-        <pathelement location="../jarh/commons-lang.jar/commons-lang.jar"/>
-        <pathelement location="../jarh/ezmorph-1.0.jar/ezmorph-1.0.jar"/>
-        <pathelement location="../jarh/json-lib-2.2.2-jdk15.jar/json-lib-2.2.2-jdk15.jar"/>
-        <pathelement location="../jarh/commons_logging.jar"/>
-        <pathelement location="../commons-httpclient.jar"/>
-        <pathelement location="../commons-codec.jar"/>
-        <pathelement location="../HttpClient4.2.1/commons-codec-1.6.jar"/>
-        <pathelement location="../HttpClient4.2.1/commons-logging-1.1.1.jar"/>
-        <pathelement location="../HttpClient4.2.1/fluent-hc-4.2.1.jar"/>
-        <pathelement location="../HttpClient4.2.1/httpclient-4.2.1.jar"/>
-        <pathelement location="../HttpClient4.2.1/httpclient-cache-4.2.1.jar"/>
-        <pathelement location="../HttpClient4.2.1/httpcore-4.2.1.jar"/>
-        <pathelement location="../HttpClient4.2.1/httpmime-4.2.1.jar"/>
-    </path>
+   <path id="compile.classpath">
+		<fileset dir="WebContent/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
 
 
     <target name="init">
