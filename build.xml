@@ -72,6 +72,10 @@
         <pathelement location="../HttpClient4.2.1/httpcore-4.2.1.jar"/>
         <pathelement location="../HttpClient4.2.1/httpmime-4.2.1.jar"/>
     </path>
+     <target name="clean">
+        <delete dir="build/classes"/>
+	<delete dir="dist"/>
+    </target>
     <target name="init">
         <mkdir dir="build/classes"/>
         <copy includeemptydirs="false" todir="build/classes">
@@ -79,10 +83,6 @@
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
-    </target>
-    <target name="clean">
-        <delete dir="build/classes"/>
-	<delete dir="dist"/>
     </target>
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
